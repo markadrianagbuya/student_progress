@@ -1,13 +1,15 @@
 class Student < ActiveRecord::Base
-  def as_json
+  has_many :progressions
+
+  def as_json(options={})
     super(:only => [:id], methods: [:part_number, :lesson_number])
   end
 
   def part_number
-    2
+    progressions.last.part_number
   end
 
   def lesson_number
-    3
+    progressions.last.lesson_number
   end
 end
