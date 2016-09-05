@@ -14,6 +14,6 @@ class Student < ActiveRecord::Base
   end
 
   def make_progress
-    progressions.last.next.save!
+    progressions.last.next.try(:save!)
   end
 end

@@ -37,13 +37,13 @@ RSpec.describe Student, type: :model do
       expect(student.lesson_number).to eq 5
     end
 
-    # it "ignores the command if no progress can be made" do
-    #   student = Student.create(id: 2)
-    #   Progression.create(lesson_number: 100, part_number: 3, student_id: 2)
-    #   student.make_progress
+    it "ignores the command if no progress can be made" do
+      student = Student.create(id: 2)
+      Progression.create(lesson_number: 100, part_number: 3, student_id: 2)
+      student.make_progress
 
-    #   expect(student.part_number).to eq 3
-    #   expect(student.lesson_number).to eq 100
-    # end
+      expect(student.part_number).to eq 3
+      expect(student.lesson_number).to eq 100
+    end
   end
 end

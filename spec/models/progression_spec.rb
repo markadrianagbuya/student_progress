@@ -15,5 +15,10 @@ RSpec.describe Progression, type: :model do
       expect(next_progression.part_number).to eq 1
       expect(next_progression.student_id).to eq 2
     end
+
+    it "returns nil if there is no next progression in the lesson sequence" do
+      next_progression = Progression.new(lesson_number: 100, part_number: 3, student_id: 2).next
+      expect(next_progression).to eq nil
+    end
   end
 end
