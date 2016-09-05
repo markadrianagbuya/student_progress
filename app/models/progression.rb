@@ -1,7 +1,7 @@
 class Progression < ActiveRecord::Base
   NUMBER_OF_LESSONS = 100
   PARTS_PER_LESSON = 3
-  LESSON_SEQUENCE = (1..NUMBER_OF_LESSONS).map{|i| (1..PARTS_PER_LESSON).map{|n| [i,n]}}.flatten(1)
+  LESSON_SEQUENCE = (1..NUMBER_OF_LESSONS).map{|lesson_number| (1..PARTS_PER_LESSON).map{|part_number| [lesson_number, part_number]}}.flatten(1)
 
   def next
     return if last_progression?
