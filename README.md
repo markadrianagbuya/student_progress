@@ -5,7 +5,7 @@ This app is a Rails application that allows a teacher to monitor their students'
 ## Specification Assumptions
 
 * Part 1
-  * The routes doe not require authentication or authorisation.
+  * The routes do not require authentication or authorisation.
 * Part 1(a)
   * A student can be set with any part number or lesson number.
     * In Part 3 it is said that students are only able to proceed to the next lesson/part. Perhaps this route is used to set a starting progress.
