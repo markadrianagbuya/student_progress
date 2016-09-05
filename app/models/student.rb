@@ -12,4 +12,8 @@ class Student < ActiveRecord::Base
   def lesson_number
     progressions.last.lesson_number
   end
+
+  def make_progress
+    progressions.last.next.save!
+  end
 end
