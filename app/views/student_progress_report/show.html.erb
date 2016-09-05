@@ -1,0 +1,5 @@
+<% @teacher.students.each do |student|%>
+  <p>
+    <%= "Student id: #{student.id}, Lesson number: #{student.lesson_number}, Part number: #{student.part_number}" %>
+  </p>
+<% end %>

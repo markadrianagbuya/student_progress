@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby "2.1.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'capybara', '~> 2.4'
 end
 
 group :development do

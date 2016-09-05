@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :progressions, only: [:create]
   resources :students, only: [:show]
+  resource :student_progress_report, only: [:show], controller: 'student_progress_report'
 
 
   # Example resource route with options:
